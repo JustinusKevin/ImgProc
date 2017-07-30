@@ -36,6 +36,11 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
         }
     }
 
+    // HSV values
+    // H = hue (color), pure green is 120 but in OpenCV it's divided by 2
+    // that's why the hue value is 45-75 or 60+/-15
+    // S = saturation, currently takes almost the whole range
+    // V = value, currently takes almost the whole range, see Wikipedia
     int iLowH = 45;
     int iHighH = 75;
     int iLowS = 20;
@@ -44,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
     int iHighV = 255;
 
     Mat imgHSV, imgThresholded; // image matrix input, output
+
     Scalar sc1, sc2;
     JavaCameraView cameraView;
 

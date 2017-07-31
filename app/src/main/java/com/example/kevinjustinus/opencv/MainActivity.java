@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
         } else {
             Log.d(TAG, "OpenCV loaded");
         }
+        
     }
 
     // HSV values
